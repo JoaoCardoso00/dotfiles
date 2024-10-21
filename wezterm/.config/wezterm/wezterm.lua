@@ -6,7 +6,7 @@ if wezterm.config_builder then
 	config = wezterm.config_builder()
 end
 
-config.color_scheme = "catppuccin-mocha"
+config.color_scheme = "rose-pine"
 config.default_cursor_style = "SteadyBlock"
 config.window_background_opacity = 0.98
 config.enable_tab_bar = true
