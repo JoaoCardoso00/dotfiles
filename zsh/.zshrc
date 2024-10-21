@@ -118,6 +118,7 @@ export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/b
 
 eval "$(starship init zsh)"
 cd www
+tmux
 
 # pnpm
 export PNPM_HOME="/Users/cardoso/Library/pnpm"
