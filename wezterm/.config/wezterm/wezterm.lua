@@ -17,11 +17,24 @@ config.font_size = 20
 config.keys = {
 	{ key = "LeftArrow", mods = "CTRL|SHIFT", action = "DisableDefaultAssignment" },
 	{ key = "RightArrow", mods = "CTRL|SHIFT", action = "DisableDefaultAssignment" },
-	{
-		key = "Space",
-		mods = "CTRL",
-		action = wezterm.action.SendKey({ key = "Space", mods = "CTRL" }),
-	},
+	{ key = "t", mods = "CMD", action = wezterm.action({ SendString = "\x1bt" }) },
+	{ key = "d", mods = "CMD", action = wezterm.action({ SendString = "\x1bd" }) },
+	{ key = "1", mods = "CMD", action = wezterm.action({ SendString = "\x1b1" }) },
+	{ key = "2", mods = "CMD", action = wezterm.action({ SendString = "\x1b2" }) },
+	{ key = "3", mods = "CMD", action = wezterm.action({ SendString = "\x1b3" }) },
+	{ key = "4", mods = "CMD", action = wezterm.action({ SendString = "\x1b4" }) },
+	{ key = "5", mods = "CMD", action = wezterm.action({ SendString = "\x1b5" }) },
+	{ key = "6", mods = "CMD", action = wezterm.action({ SendString = "\x1b6" }) },
+	{ key = "7", mods = "CMD", action = wezterm.action({ SendString = "\x1b7" }) },
+	{ key = "8", mods = "CMD", action = wezterm.action({ SendString = "\x1b8" }) },
+	{ key = "9", mods = "CMD", action = wezterm.action({ SendString = "\x1b9" }) },
+	{ key = "w", mods = "CMD", action = wezterm.action({ SendString = "\x1bw" }) },
+
+	-- Copy and Paste
+	{ key = "c", mods = "CMD", action = wezterm.action.CopyTo("Clipboard") },
+	{ key = "v", mods = "CMD", action = wezterm.action.PasteFrom("Clipboard") },
 }
+
+config.disable_default_key_bindings = true
 
 return config
