@@ -111,8 +111,6 @@ source $(brew --prefix nvm)/nvm.sh
 export PATH="/opt/homebrew/opt/php@7.4/bin:$PATH"
 export PATH="/opt/homebrew/opt/php@7.4/sbin:$PATH"
 
-
-export OPENAI_API_KEY='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'
 export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin" 
 
 eval "$(starship init zsh)"
