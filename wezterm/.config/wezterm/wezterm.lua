@@ -17,6 +17,11 @@ config.font_size = 20
 config.keys = {
 	{ key = "LeftArrow", mods = "CTRL|SHIFT", action = "DisableDefaultAssignment" },
 	{ key = "RightArrow", mods = "CTRL|SHIFT", action = "DisableDefaultAssignment" },
+	{
+		key = "Space",
+		mods = "CTRL",
+		action = wezterm.action.SendKey({ key = "Space", mods = "CTRL" }),
+	},
 }
 
 return config

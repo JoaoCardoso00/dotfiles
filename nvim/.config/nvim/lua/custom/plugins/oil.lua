@@ -10,6 +10,8 @@ return {
 
       keymaps = {
         ['<leader>pv'] = 'oil',
+        ['<C-h>'] = false,
+        ['<C-l>'] = false,
       },
 
       skip_confirm_for_simple_edits = true,
