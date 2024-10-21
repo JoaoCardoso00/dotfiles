@@ -11,6 +11,7 @@ config.default_cursor_style = "SteadyBlock"
 config.window_background_opacity = 0.98
 config.enable_tab_bar = true
 config.use_fancy_tab_bar = true
+config.enable_tab_bar = false
 config.font_size = 20
 
 config.keys = {
