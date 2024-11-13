@@ -6,7 +6,6 @@ end
 config.color_scheme = "rose-pine"
 config.default_cursor_style = "SteadyBlock"
 config.window_background_opacity = 0.98
-config.enable_tab_bar = true
 config.use_fancy_tab_bar = true
 config.enable_tab_bar = false
 config.font_size = 20
@@ -24,7 +23,15 @@ config.keys = {
 	{ key = "7", mods = "CMD", action = wezterm.action({ SendString = "\x1b7" }) },
 	{ key = "8", mods = "CMD", action = wezterm.action({ SendString = "\x1b8" }) },
 	{ key = "9", mods = "CMD", action = wezterm.action({ SendString = "\x1b9" }) },
-	{ key = "w", mods = "CMD", action = wezterm.action({ SendString = "\x1bw" }) },
+	{
+		key = "w",
+		mods = "CMD",
+		action = wezterm.action.Multiple({
+			wezterm.action.SendString("\x1bw"), -- Send Alt+W
+			-- You can uncomment the next line to verify it's being sent
+			-- wezterm.action.SendString(" (sent!)"),
+		}),
+	},
 	-- Copy and Paste
 	{ key = "c", mods = "CMD", action = wezterm.action.CopyTo("Clipboard") },
 	{ key = "v", mods = "CMD", action = wezterm.action.PasteFrom("Clipboard") },
