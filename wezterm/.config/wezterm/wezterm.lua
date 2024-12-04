@@ -10,8 +10,8 @@ config.use_fancy_tab_bar = true
 config.enable_tab_bar = false
 config.font_size = 20
 config.keys = {
-	{ key = "LeftArrow", mods = "CTRL|SHIFT", action = "DisableDefaultAssignment" },
-	{ key = "RightArrow", mods = "CTRL|SHIFT", action = "DisableDefaultAssignment" },
+	{ key = "LeftArrow", mods = "CTRL|SHIFT", action = wezterm.action.DisableDefaultAssignment },
+	{ key = "RightArrow", mods = "CTRL|SHIFT", action = wezterm.action.DisableDefaultAssignment },
 	{ key = "t", mods = "CMD", action = wezterm.action({ SendString = "\x1bt" }) },
 	{ key = "d", mods = "CMD", action = wezterm.action({ SendString = "\x1bd" }) },
 	{ key = "1", mods = "CMD", action = wezterm.action({ SendString = "\x1b1" }) },
@@ -23,19 +23,26 @@ config.keys = {
 	{ key = "7", mods = "CMD", action = wezterm.action({ SendString = "\x1b7" }) },
 	{ key = "8", mods = "CMD", action = wezterm.action({ SendString = "\x1b8" }) },
 	{ key = "9", mods = "CMD", action = wezterm.action({ SendString = "\x1b9" }) },
+	{ key = "h", mods = "CTRL", action = wezterm.action({ SendString = "\x02h" }) },
+	{ key = "j", mods = "CTRL", action = wezterm.action({ SendString = "\x02j" }) },
+	{ key = "k", mods = "CTRL", action = wezterm.action({ SendString = "\x02k" }) },
+	{ key = "l", mods = "CTRL", action = wezterm.action({ SendString = "\x02l" }) },
+	{
+		key = "r",
+		mods = "CTRL|SHIFT",
+		action = wezterm.action.ReloadConfiguration,
+	},
 	{
 		key = "w",
 		mods = "CMD",
 		action = wezterm.action.Multiple({
-			wezterm.action.SendString("\x1bw"), -- Send Alt+W
-			-- You can uncomment the next line to verify it's being sent
-			-- wezterm.action.SendString(" (sent!)"),
+			wezterm.action.SendString("\x1bw"), -- send alt+w
 		}),
 	},
-	-- Copy and Paste
+	-- copy and paste
 	{ key = "c", mods = "CMD", action = wezterm.action.CopyTo("Clipboard") },
 	{ key = "v", mods = "CMD", action = wezterm.action.PasteFrom("Clipboard") },
-	-- Increase and decrease font size
+	-- increase and decrease font size
 	{ key = "=", mods = "CMD", action = wezterm.action.IncreaseFontSize },
 	{ key = "-", mods = "CMD", action = wezterm.action.DecreaseFontSize },
 	{ key = "0", mods = "CMD", action = wezterm.action.ResetFontSize },
