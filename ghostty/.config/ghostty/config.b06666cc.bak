@@ -1,6 +1,6 @@
 # Theme
 
-theme = Rose Pine 
+theme = rose-pine
 palette = 2=#31748f
 palette = 10=#31748f
 palette = 4=#9ccfd8
@@ -31,4 +31,3 @@ keybind = ctrl+shift+h=new_split:left
 keybind = ctrl+shift+l=new_split:right
 keybind = ctrl+shift+k=new_split:up
 keybind = ctrl+shift+j=new_split:down
-keybind = shift+enter=text:\n

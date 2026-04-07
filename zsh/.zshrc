@@ -136,4 +136,23 @@ export COLORTERM=truecolor
 # sst
 export PATH=/Users/cardoso/.sst/bin:$PATH
 
+# Set Java 17 as default
+export JAVA_HOME=$(/usr/libexec/java_home -v 17)
+export PATH=$JAVA_HOME/bin:$PATH
+
+# ZSH autosuggestions
 source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+# Android SDK
+export ANDROID_HOME=$HOME/Library/Android/sdk
+export PATH=$PATH:$ANDROID_HOME/platform-tools
+
+export PATH="$PATH:$HOME/Library/Android/sdk/platform-tools"
+export PATH="$HOME/.local/bin:$PATH"
+# The following lines have been added by Docker Desktop to enable Docker CLI completions.
+fpath=(/Users/cardoso/.docker/completions $fpath)
+autoload -Uz compinit
+compinit
+# End of Docker CLI completions
+
+export PATH="/Applications/Docker.app/Contents/Resources/bin:$PATH"

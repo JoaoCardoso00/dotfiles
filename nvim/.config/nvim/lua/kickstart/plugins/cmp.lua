@@ -51,7 +51,9 @@ return {
         mapping = {
 
           -- Trigger manual completion with Cntrl + Space on macOS
-          ['<C-l>'] = cmp.mapping.complete(),
+          ['<C-x>'] = cmp.mapping(function()
+            cmp.complete()
+          end),
 
           -- Use Tab and Shift+Tab to navigate through the popup menu
           ['<Tab>'] = cmp.mapping(function(fallback)
