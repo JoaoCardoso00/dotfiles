@@ -1,0 +1,3 @@
+# Configuration kept locally but excluded from the portable dotfiles.
+/claude/
+/tmux/

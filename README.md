@@ -12,24 +12,23 @@ Personal dotfiles managed with GNU Stow.
 ```bash
 git clone https://github.com/JoaoCardoso00/dotfiles.git ~/.dotfiles
 cd ~/.dotfiles
-stow */  # Install all configs
+stow zsh ghostty nvim starship
 ```
 
 ## Structure
 
 ```
 .
+├── ghostty/.config/ghostty # Ghostty terminal
 ├── nvim/.config/nvim      # Neovim configuration
 ├── starship/.config       # Starship prompt
-├── tmux/.config/tmux      # Tmux configuration
-├── wezterm/.config/wezterm # Wezterm terminal
 └── zsh                    # ZSH configuration
 ```
 
 ## Usage
 
 ```bash
-stow */            # Install all
-stow -D */         # Uninstall all
+stow zsh ghostty nvim starship
+stow -D zsh ghostty nvim starship
 stow nvim          # Install single config
 ```
